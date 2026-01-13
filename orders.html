@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ICDF | Taiwan information</title>
+		<link rel="stylesheet" href="./dist/style/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+	</head>
+
+	<body>
+		<div class="d-flex">
+      <aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
+				<!-- 1.後台名稱 -->
+				<div class="px-4">
+					<h1 class="h5"><strong>ICDF</strong> Taiwan information</h1>
+				</div>
+				<!-- 2.選單 -->
+				<div class="overflow-auto mt-3">
+					<a href="home.html" class="sidebar-link px-4"
+						><i class="bi bi-house pe-2"></i>Introduction to ICDF</a
+					>
+					<div>
+						<a
+							href="#menu-order"
+							class="sidebar-link"
+							data-bs-toggle="collapse"
+						>
+							<div class="d-flex justify-content-between px-4">
+								<p class="mb-0">
+									<i class="bi bi-card-checklist pe-2"></i>Database
+								</p>
+								<i class="bi bi-caret-down"></i>
+							</div>
+						</a>
+						<div class="collapse" id="menu-order">
+							<a href="orders.html" class="sidebar-link">
+								<div class="ps-5">List of TW machinery manufacturers</div>
+							</a>
+							<a href="order.html" class="sidebar-link">
+								<div class="ps-5">manufacturer1 - AAA</div>
+							</a>
+              <a href="order2.html" class="sidebar-link">
+								<div class="ps-5">manufacturer2 - BBB</div>
+							</a>
+						</div>
+						<a href="#" class="sidebar-link">
+							<div class="px-4"><i class="bi bi-list-check pe-2"></i>Other information</div>
+						</a>
+					</div>
+				</div>
+				<!-- 3.登出按鈕 -->
+				<a href="#" class="mt-auto sidebar-link px-4">Log out</a>
+			</aside>
+
+			<main class="main">
+				<div class="toggle-btn bg-white w-auto border-bottom sticky-top">
+					<a
+						href="#"
+						class="py-3 px-4 d-inline-block border-end"
+						id="toggle-btn"
+					>
+						<i class="bi bi-arrows-angle-expand"></i
+					></a>
+				</div>
+
+				<!-- 4.主要內容 -->
+				<div class="p-4">
+					<!-- nav -->
+					<ul class="nav nav-pills mb-4">
+						<li class="nav-item">
+							<a
+								class="nav-link rounded-pill active"
+								aria-current="page"
+								href="#"
+								>All
+								<span class="badge rounded-pill text-bg-light">12</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link rounded-pill" href="#"
+								>Seedling mach
+								<span class="badge rounded-pill text-bg-light">6</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link rounded-pill" href="#"
+								>Transplanter
+								<span class="badge rounded-pill text-bg-light">2</span>
+							</a>
+						</li>
+							<li class="nav-item">
+							<a class="nav-link rounded-pill" href="#"
+								>post harvest mach
+								<span class="badge rounded-pill text-bg-light">4</span>
+							</a>
+						</li>
+					</ul>
+					<!-- card -->
+					<div class="card shadow-sm">
+						<div class="card-header bg-transparent">
+							<div class="input-group">
+								<span class="input-group-text border-0 bg-transparent pe-0">
+									<i class="bi bi-search"></i>
+								</span>
+								<input
+									type="search"
+									id="searchBar"
+									class="form-control border-0 shadow-none"
+									placeholder="Search"
+								/>
+							</div>
+						</div>
+						<div class="card-body p-0">
+							<div class="table-responsive">
+								<table class="table table-hover mb-0">
+									<thead class="bg-light">
+										<tr class="align-middle">
+											<th scope="col" class="ps-4"></th>
+											<th scope="col" class="py-3">Category</th>
+											<th scope="col">name</th>
+											<th scope="col">major</th>
+											<th scope="col" class="text-end">contact person</th>
+											<th scope="col" class="pe-4">contact number</th>
+										</tr>
+									</thead>
+									<tbody class="text-nowrap">
+										<tr>
+											<td class="ps-4">
+												<input type="checkbox" class="form-check-input" />
+											</td>
+											<td scope="row">Seedling machinery</td>
+											<td>AAA CO., LTD</td>
+											<td>Planter</td>
+											<td>Miss. Amy</td>
+											<td>
+												<div class="text-muted">+886 916222222</div>
+											</td>
+											<!-- <td class="text-end">A工廠</td> -->
+											<!-- <td class="pe-4">
+												<div class="btn-group">
+													<a href="#" class="btn btn-sm btn-outline-dark">
+														編輯 <i class="bi bi-pen"></i
+													></a>
+													<button
+														class="btn btn-sm btn-outline-dark dropdown-toggle"
+														type="button"
+														data-bs-toggle="dropdown"
+														aria-expanded="false"
+													>
+														操作
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a class="dropdown-item" href="#">修改</a>
+														</li>
+														<li>
+															<a class="dropdown-item text-danger" href="#"
+																>刪除</a
+															>
+														</li>
+													</ul>
+												</div>
+											</td> -->
+										</tr>
+										<tr>
+											<td class="ps-4">
+												<input type="checkbox" class="form-check-input" />
+											</td>
+											<td scope="row">Seedling machinery</td>
+											<td>BBB CO., LTD</td>
+											<td>Soil screening</td>
+											<td>Mr. Jay</td>
+											<td>
+												<div class="text-muted">+886 987111111</div>
+											</td>
+											<!-- <td class="pe-4">
+												<div class="btn-group">
+													<a href="#" class="btn btn-sm btn-outline-dark">
+														編輯 <i class="bi bi-pen"></i
+													></a>
+													<button
+														class="btn btn-sm btn-outline-dark dropdown-toggle"
+														type="button"
+														data-bs-toggle="dropdown"
+														aria-expanded="false"
+													>
+														操作
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a class="dropdown-item" href="#">修改</a>
+														</li>
+														<li>
+															<a class="dropdown-item text-danger" href="#"
+																>刪除</a
+															>
+														</li>
+													</ul>
+												</div>
+											</td> -->
+										</tr>
+										<tr>
+											<td class="ps-4">
+												<input type="checkbox" class="form-check-input" />
+											</td>
+											<td scope="row">Transplanter</td>
+											<td>CCC CO., LTD</td>
+											<td>Ride-on type</td>
+											<td>Mr. Go</td>
+											<td>
+												<div class="text-muted">+886 910333333</div>
+											</td>
+											<!-- <td class="text-end">C農藥行</td>
+											<td class="pe-4">
+												<div class="btn-group">
+													<a href="#" class="btn btn-sm btn-outline-dark">
+														編輯 <i class="bi bi-pen"></i
+													></a>
+													<button
+														class="btn btn-sm btn-outline-dark dropdown-toggle"
+														type="button"
+														data-bs-toggle="dropdown"
+														aria-expanded="false"
+													>
+														操作
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a class="dropdown-item" href="#">修改</a>
+														</li>
+														<li>
+															<a class="dropdown-item text-danger" href="#"
+																>刪除</a
+															>
+														</li>
+													</ul>
+												</div>
+											</td> -->
+										</tr>
+										<tr class="">
+											<td class="ps-4">
+												<input type="checkbox" class="form-check-input" />
+											</td>
+											<td scope="row">Post-harvest mach</td>
+											<td>DDD CO., LTD</td>
+											<td>Classification</td>
+											<td>Miss. Jennifer</td>
+											<td>
+												<div class="text-muted">+886 933212121</div>
+											</td>
+											<!-- <td class="text-end">農場自製</td>
+											<td class="pe-4">
+												<div class="btn-group">
+													<a href="#" class="btn btn-sm btn-outline-dark">
+														編輯 <i class="bi bi-pen"></i
+													></a>
+													<button
+														class="btn btn-warning btn-sm btn-outline-dark dropdown-toggle"
+														type="button"
+														data-bs-toggle="dropdown"
+														aria-expanded="false"
+													>
+														操作
+													</button>
+													<ul class="dropdown-menu">
+														<li>
+															<a class="dropdown-item" href="#">修改</a>
+														</li>
+														<li>
+															<a
+																class="dropdown-item text-danger"
+																href="#"
+																data-bs-toggle="modal"
+																data-bs-target="#deleteModal"
+																data-bs-order-id="葵無露"
+																>刪除</a
+															>
+														</li>
+													</ul>
+												</div>
+											</td> -->
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- footer -->
+						<div class="card-footer bg-transparent py-3">
+							<nav aria-label="Page navigation example">
+								<ul class="pagination justify-content-end mb-0">
+									<!-- 加上disabled作為已切換至頭頁的效果 -->
+									<li class="page-item disabled">
+										<a class="page-link" href="#">Previous</a>
+									</li>
+									<!-- 加上active作為當前為第一頁效果 -->
+									<li class="page-item active">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item">
+										<a class="page-link" href="#">Next</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- modal -->
+						<div
+							class="modal fade"
+							id="deleteModal"
+							tabindex="-1"
+							aria-labelledby="exampleModalLabel"
+							aria-hidden="true"
+						>
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title fs-5" id="exampleModalLabel">
+											刪除品相
+										</h1>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close"
+										></button>
+									</div>
+									<div class="modal-body">
+										<p>確認刪除『<span id="deleteText"></span>』品相嗎？</p>
+									</div>
+									<div class="modal-footer">
+										<button
+											type="button"
+											class="btn btn-outline-dark"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
+										<button type="button" class="btn btn-danger">
+											確認刪除
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- modal script -->
+						<script>
+							const modalByDelete = document.querySelector('#deleteModal')
+							modalByDelete.addEventListener('show.bs.modal', function (event) {
+								const button = event.relatedTarget
+								const orderId = button.dataset.bsOrderId
+								const modalText = modalByDelete.querySelector('#deleteText')
+								modalText.textContent = orderId
+							})
+						</script>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+			crossorigin="anonymous"
+		></script>
+		<!-- 自定義js -->
+		<script src="./javascripts/all.js"></script>
+	</body>
+</html>

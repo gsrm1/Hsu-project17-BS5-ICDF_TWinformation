@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ICDF | Taiwan information</title>
+		<link rel="stylesheet" href="./dist/style/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+	</head>
+
+	<body
+		data-bs-spy="scroll"
+		data-bs-target="#scrollspy-order"
+		data-bs-offset="80"
+	>
+		<div class="d-flex">
+	<aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
+				<!-- 1.後台名稱 -->
+				<div class="px-4">
+					<h1 class="h5"><strong>ICDF</strong> Taiwan information</h1>
+				</div>
+				<!-- 2.選單 -->
+				<div class="overflow-auto mt-3">
+					<a href="home.html" class="sidebar-link px-4"
+						><i class="bi bi-house pe-2"></i>Introduction to ICDF</a
+					>
+					<div>
+						<a
+							href="#menu-order"
+							class="sidebar-link"
+							data-bs-toggle="collapse"
+						>
+							<div class="d-flex justify-content-between px-4">
+								<p class="mb-0">
+									<i class="bi bi-card-checklist pe-2"></i>Database
+								</p>
+								<i class="bi bi-caret-down"></i>
+							</div>
+						</a>
+						<div class="collapse" id="menu-order">
+							<a href="orders.html" class="sidebar-link">
+								<div class="ps-5">List of TW machinery manufacturers</div>
+							</a>
+							<a href="order.html" class="sidebar-link">
+								<div class="ps-5">manufacturer1 - AAA</div>
+							</a>
+              <a href="order2.html" class="sidebar-link">
+								<div class="ps-5">manufacturer2 - BBB</div>
+							</a>
+						</div>
+						<a href="#" class="sidebar-link">
+							<div class="px-4"><i class="bi bi-list-check pe-2"></i>Other information</div>
+						</a>
+					</div>
+				</div>
+				<!-- 3.登出按鈕 -->
+				<a href="#" class="mt-auto sidebar-link px-4">Log out</a>
+			</aside>
+
+			<main class="main">
+				<div class="toggle-btn bg-white w-auto border-bottom sticky-top">
+					<a
+						href="#"
+						class="py-3 px-4 d-inline-block border-end"
+						id="toggle-btn"
+					>
+						<i class="bi bi-arrows-angle-expand"></i
+					></a>
+				</div>
+
+				<!-- 4.主要內容 -->
+				<div class="p-4">
+					<div class="row">
+						<!-- <div class="col-lg-3 mb-3 d-none d-lg-block">
+							<nav
+								id="scrollspy-order"
+								class="list-group sticky-top"
+								style="top: 80px"
+							>
+								<a
+									href="#card-summary"
+									class="list-group-item list-group-item-action active"
+									aria-current="true"
+									>摘要</a
+								>
+								<a
+									href="#card-detail"
+									class="list-group-item list-group-item-action"
+									>購買品項</a
+								>
+								<a
+									href="#card-invoice"
+									class="list-group-item list-group-item-action"
+									>發票管理</a
+								>
+								<a
+									href="#card-danger"
+									class="list-group-item list-group-item-action"
+									>危險操作</a
+								>
+							</nav>
+						</div> -->
+						<div class="col-lg-9">
+							<div class="card mb-3">
+								<div class="card-header" id="card-summary">AAA CO., LTD- Summary</div>
+								<div class="card-body">
+									<dl class="row mb-0">
+										<dt class="col-sm-3 text-truncate">Company name</dt>
+										<dd class="col-sm-9">AAA CO., LTD</dd>
+										<dt class="col-sm-3 text-truncate">Category</dt>
+										<dd class="col-sm-9">Seedling machinery</dd>
+										<dt class="col-sm-3 text-truncate">Major</dt>
+										<dd class="col-sm-9">Planter</dd>
+										<dt class="col-sm-3 text-truncate">Contact person</dt>
+										<dd class="col-sm-9">Miss. Amy</dd>
+										<dt class="col-sm-3 text-truncate">Contact number</dt>
+										<dd class="col-sm-9">+886 916222222</dd>
+										<dt class="col-sm-3 text-truncate">Note</dt>
+										<dd class="col-sm-9">something else...</dd>
+									</dl>
+								</div>
+							</div>
+
+							<div class="card mb-3">
+								<div class="card-header" id="card-detail">Main machinerys</div>
+								<div class="card-body p-0 table-responsive">
+									<table
+										class="table table-hover mb-0 text-nowrap align-middle w-100"
+										style="font-size: 14px"
+									>
+										<thead class="bg-light">
+											<tr>
+												<th scope="col" class="ps-4 py-3 border-0"></th>
+												<th scope="col" class="py-3 border-0">name</th>
+												<th scope="col" class="py-3 border-0">purpose</th>
+												<th scope="col" class="py-3 border-0">spec.</th>
+												<th scope="col" class="py-3 border-0">qty.</th>
+												<th scope="col" class="py-3 border-0">Supply status</th>
+												<th scope="col" class="py-3 pe-3 border-0">notes</th>
+											</tr>
+										</thead>
+										<tbody class="text-nowrap">
+											<tr class="align-middle">
+												<td class="ps-4">
+													<input type="checkbox" class="form-check-input" />
+												</td>
+												<td scope="row">SA01</td>
+												<td>rice seed planter</td>
+												<td>up to 3,000 trays/hr</td>
+												<td>3</td>
+												<td>
+													<div class="text-muted">available</div>
+												</td>
+												<td class="text-center pe-3">something else...
+													<!-- <div class="btn-group">
+														<button
+															type="button"
+															class="btn btn-outline-secondary btn-sm dropdown-toggle"
+															data-bs-toggle="dropdown"
+															aria-expanded="false"
+														>
+															編輯
+														</button>
+														<ul class="dropdown-menu">
+															<li>
+																<a href="#" class="dropdown-item">尚未出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已取貨</a>
+															</li>
+															<li>
+																<hr class="dropdown-divider" />
+															</li>
+															<li>
+																<a href="#" class="dropdown-item text-danger"
+																	>刪除品項</a
+																>
+															</li>
+														</ul>
+													</div> -->
+												</td>
+											</tr>
+												<tr class="align-middle">
+												<td class="ps-4">
+													<input type="checkbox" class="form-check-input" />
+												</td>
+												<td scope="row">SA02</td>
+												<td>rice seed planter2</td>
+												<td>up to 2,300 trays/hr</td>
+												<td>12</td>
+												<td>
+													<div class="text-muted">available</div>
+												</td>
+												<td class="text-center pe-3">something else...
+													<!-- <div class="btn-group">
+														<button
+															type="button"
+															class="btn btn-outline-secondary btn-sm dropdown-toggle"
+															data-bs-toggle="dropdown"
+															aria-expanded="false"
+														>
+															編輯
+														</button>
+														<ul class="dropdown-menu">
+															<li>
+																<a href="#" class="dropdown-item">尚未出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已取貨</a>
+															</li>
+															<li>
+																<hr class="dropdown-divider" />
+															</li>
+															<li>
+																<a href="#" class="dropdown-item text-danger"
+																	>刪除品項</a
+																>
+															</li>
+														</ul>
+													</div> -->
+												</td>
+											</tr>
+												<tr class="align-middle">
+												<td class="ps-4">
+													<input type="checkbox" class="form-check-input" />
+												</td>
+												<td scope="row">BA05</td>
+												<td>soil mixer</td>
+												<td>up to 10kg /min</td>
+												<td>5</td>
+												<td>
+													<div class="text-muted">un-available</div>
+												</td>
+												<td class="text-center pe-3">something else...
+													<!-- <div class="btn-group">
+														<button
+															type="button"
+															class="btn btn-outline-secondary btn-sm dropdown-toggle"
+															data-bs-toggle="dropdown"
+															aria-expanded="false"
+														>
+															編輯
+														</button>
+														<ul class="dropdown-menu">
+															<li>
+																<a href="#" class="dropdown-item">尚未出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已取貨</a>
+															</li>
+															<li>
+																<hr class="dropdown-divider" />
+															</li>
+															<li>
+																<a href="#" class="dropdown-item text-danger"
+																	>刪除品項</a
+																>
+															</li>
+														</ul>
+													</div> -->
+												</td>
+											</tr>
+											<!-- <tr class="align-middle">
+												<td class="ps-4">
+													<input type="checkbox" class="form-check-input" />
+												</td>
+												<td scope="row">P1234567</td>
+												<td>蝴蝶蘭小黃花11號</td>
+												<td>15,000</td>
+												<td>10組</td>
+												<td>
+													<div class="text-muted">已取貨</div>
+												</td>
+												<td class="text-center pe-3">
+													<div class="btn-group">
+														<button
+															type="button"
+															class="btn btn-outline-secondary btn-sm dropdown-toggle"
+															data-bs-toggle="dropdown"
+															aria-expanded="false"
+														>
+															編輯
+														</button>
+														<ul class="dropdown-menu">
+															<li>
+																<a href="#" class="dropdown-item">尚未出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已取貨</a>
+															</li>
+															<li>
+																<hr class="dropdown-divider" />
+															</li>
+															<li>
+																<a href="#" class="dropdown-item text-danger"
+																	>刪除品項</a
+																>
+															</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr class="align-middle">
+												<td class="ps-4">
+													<input type="checkbox" class="form-check-input" />
+												</td>
+												<td scope="row">P1234567</td>
+												<td>葵無露</td>
+												<td>4,550</td>
+												<td>13罐</td>
+												<td>
+													<div class="text-muted">已取貨</div>
+												</td>
+												<td class="text-center pe-3">
+													<div class="btn-group">
+														<button
+															type="button"
+															class="btn btn-outline-secondary btn-sm dropdown-toggle"
+															data-bs-toggle="dropdown"
+															aria-expanded="false"
+														>
+															編輯
+														</button>
+														<ul class="dropdown-menu">
+															<li>
+																<a href="#" class="dropdown-item">尚未出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已出貨</a>
+															</li>
+															<li>
+																<a href="#" class="dropdown-item">已取貨</a>
+															</li>
+															<li>
+																<hr class="dropdown-divider" />
+															</li>
+															<li>
+																<a href="#" class="dropdown-item text-danger"
+																	>刪除品項</a
+																>
+															</li>
+														</ul>
+													</div>
+												</td>
+											</tr> -->
+										</tbody>
+									</table>
+									<!-- <div class="px-4 py-3">
+										<div class="btn-group">
+											<button
+												type="button"
+												class="btn btn-outline-secondary btn-sm dropdown-toggle"
+												data-bs-toggle="dropdown"
+												aria-expanded="false"
+											>
+												編輯
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#" class="dropdown-item">尚未出貨</a></li>
+												<li><a href="#" class="dropdown-item">已出貨</a></li>
+												<li><a href="#" class="dropdown-item">已取貨</a></li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a href="#" class="dropdown-item text-danger"
+														>刪除品項</a
+													>
+												</li>
+											</ul>
+										</div>
+									</div> -->
+								</div>
+							</div>
+
+							<div class="card mb-3">
+								<div class="card-header" id="card-danger">more informations</div>
+								<div class="card-body">
+									<div class="row align-items-center mb-3">
+										<div class="col-3">
+											<button
+												type="button"
+												class="btn btn-outline-secondary w-100"
+											>
+												Website
+											</button>
+										</div>
+										<div class="col">Official website of AAA CO., LTD</div>
+									</div>
+									<div class="row align-items-center mb-3">
+										<div class="col-3">
+											<button
+												type="button"
+												class="btn btn-outline-secondary w-100"
+											>
+												Mail
+											</button>
+										</div>
+										<div class="col">Official email address of AAA CO., LTD</div>
+									</div>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<button
+												type="button"
+												class="btn btn-outline-danger w-100"
+											>
+												Other issues
+											</button>
+										</div>
+										<div class="col">contact email of ICDF rice project person in charge</div>
+									</div>
+								</div>
+							</div>
+
+							<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+			crossorigin="anonymous"
+		></script>
+		<!-- 自定義js -->
+		<script src="./javascripts/all.js"></script>
+	</body>
+</html>

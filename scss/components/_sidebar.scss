@@ -1,0 +1,85 @@
+$sidebar-width: 280px;
+
+//先寫行動版靜態樣式
+.sidebar {
+	width: $sidebar-width;
+	margin-left: -$sidebar-width;
+	transition: margin-left 0.25s;
+	position: fixed;
+	top: 0;
+
+	&-link {
+		color: $dark;
+		display: block;
+		text-decoration: none;
+		padding-top: 0.875rem;
+		padding-bottom: 0.875rem;
+
+		&:hover {
+			background-color: rgba($primary, 0.16);
+		}
+	}
+
+	&-link.active {
+		position: relative;
+		color: $primary !important;
+		background-color: rgba($primary, 0.16);
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 3px;
+			background: $primary;
+		}
+	}
+}
+
+.main {
+	width: 100%;
+}
+
+//js用：展開sidebar
+.sidebar-toggled {
+	.sidebar {
+		margin-left: 0;
+		z-index: 10; //覆蓋在main上避免推擠產生x軸
+	}
+
+	.toggle-btn {
+		margin-left: $sidebar-width;
+	}
+}
+
+//後寫桌面板靜態樣式
+//在sass內取用mixin的media-query來設定RWD專用class
+@include media-breakpoint-up(md) {
+	.sidebar {
+		margin-left: 0;
+	}
+
+	.main {
+		// 將原100vw改成100%以解決main下y軸bar空間導致產生x軸問題(因為viewport可顯示的區塊不包含 垂直 scollBar 的寬度 )
+		width: calc(100% - #{$sidebar-width});
+		margin-left: $sidebar-width;
+		transition: margin-left 0.25s;
+		//calc會將內部視為字串故變數無法被正確讀取，這時需加上#{}修正
+	}
+
+	.sidebar-toggled {
+		.sidebar {
+			margin-left: -$sidebar-width;
+		}
+
+		.main {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.toggle-btn {
+			margin-left: 0;
+		}
+	}
+}
